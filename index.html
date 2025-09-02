@@ -2,103 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Message for You</title>
+  <title>Message for Cha</title>
   <style>
     body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0a1a2f; /* dark blue */
+      color: #f0f4ff;
       margin: 0;
-      font-family: "Georgia", serif;
-      background-color: #0a1a2f;
-      color: #e0e6f0;
+      padding: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      text-align: center;
+      text-align: justify;
     }
     .container {
       max-width: 800px;
-      padding: 30px;
       background: rgba(20, 40, 70, 0.9);
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    }
-    h1 {
-      font-size: 2rem;
-      color: #a6c8ff;
-      margin-bottom: 20px;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      display: none; /* hidden until play */
     }
     button {
-      background: #1db954;
+      padding: 12px 24px;
+      font-size: 18px;
       border: none;
-      color: white;
-      font-size: 1.2rem;
-      padding: 12px 25px;
-      border-radius: 25px;
+      border-radius: 12px;
+      background: #1e3a6d;
+      color: #fff;
       cursor: pointer;
-      transition: background 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+      transition: background 0.3s;
     }
     button:hover {
-      background: #17a74a;
-    }
-    .message {
-      margin-top: 25px;
-      text-align: justify;
-      display: none;
-      line-height: 1.6;
-      color: #d8e2f1;
+      background: #2a4f91;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Play me first before reading :3</h1>
-    <button id="playButton">Play Me First</button>
-    <div id="message" class="message">
-      <p>
-        (Final Part) Spoiler alert! Yeah, it was me hahaha (Pero legit an nag propose han telegram it wasn't me kay nag expire na nim ngl or bangin gin hide mo haak? I dunno). I had a feeling you might’ve already known, but I guess not? but I never put too much thought into it. The truth is, I’m saying this because I need to cut myself off from you not because I want to, but because I know I can’t just settle for being friends with someone I genuinely have feelings for. You already knew I liked you since I told you before, but what I don’t think you know is when it all really started.
-      </p>
-      <p>
-        It wasn’t the day you joked about us being together during my championship that only made me realize it more. It actually started way before that, when you showed me your vulnerable yet mature side. Like ha tatas an mag urupod kita nira Fred. I can still remember that moment when you pouted while joking around, trying to act strong but also soft at the same time (Like an bisan guti la nak boses nahataas bisan dik nag iisog and nayakan ka "Ayaw gad ak pag isgi"). My god, maybe that’s where it truly began? I'm not sure pero adto na time like it came to my head na this peson deserves the world and, she's such a soft and caring person its adorable and, I just want to protect this person. I can’t even pinpoint it exactly, but what I know for sure is that my feelings grew deeper from then on.
-      </p>
-      <p>
-        It kept bothering me because, even though I tried to deny it, I couldn’t. And when you joked about “wanting me,” I’ll admit I seriously thought about it. I wondered, what if? But since it was a joke, I brushed it off, even if deep down it meant something more to me. That’s when I realized I don’t do well with jokes like that, especially when it’s about something real to me. And I also don't think you should keep joking about things like that in the future with your other friends.
-      </p>
-      <p>
-        I know you used “our circle” as one of the reasons why things couldn’t happen, but honestly, that felt like such a small excuse compared to what I felt. Because the moment that joke was made, part of me knew our friendship wouldn’t be the same anymore at that day you used it as a reason, I considered our friendship as good as dead. Not because I was angry, but because I realized I couldn’t keep pretending I was fine with just being your friend. I always thought I could’ve done everything to make you happy but I also knew I’d lose my sanity if I kept pushing myself to stay when I couldn’t handle it.
-      </p>
-      <p>
-        Please don’t think I’m mad at you, because I’m really not. It’s quite the opposite. I genuinely liked you not just because you’re pretty, or funny, or any surface-level thing but because I noticed the little things about you, how you carry yourself, how you try to look strong but have that soft, vulnerable side, how you light up in random moments without even realizing it. Those little things stuck with me so much that I chose to stay beside you even when it hurt me.
-      </p>
-      <p>
-        I’m sorry this has to be said on your birthday. By the time you read this, maybe I’ll have already restricted you or maybe not it depends on how I’m holding up. But please know this... I treated you genuinely as a friend. I never gave you “special treatment” because I didn’t want to cross boundaries. This flower is probably the only special thing I’ll ever give you, because I wanted you to at least feel that you deserve to be treated right. If some guy in the past didn’t treat you the way you deserved, then let this be a reminder that you’re worth more than that.
-      </p>
-      <p>
-        And if ever you and Sam do work out, I won’t mind. I’ll genuinely be happy for both of you. That’s all. Stay safe always, Cha-Cha. If ever there’s an emergency, call Ash she knows everything already and, I told her my reasons. But I hope you two still bond from time to time.
-      </p>
-      <p>
-        Take care always, and thank you for everything, even if you didn’t realize how much it meant to me. I swear to god madakop ko la adto na nag ngl haim na usa kay kakarnehon ko gud naguba pa nak image. But on a serious note, I wish I could've said all of this in person but, knowing you, a soft hearted person I don't want to see you cry. Sorry and, Thank you talaga Cha ❤
-      </p>
-      <p>
-        Date Written: August 26, 2025<br>
-        Date Revised: August 29, 2025
-      </p>
-    </div>
+
+  <button id="playButton">Play me first before reading</button>
+  <audio id="bgMusic" src="Song.mp3"></audio>
+
+  <div class="container" id="message">
+    <h2>For Cha</h2>
+    <p>
+      (Final Part) Spoiler alert! Yeah, it was me hahaha (Pero legit an nag propose han telegram it wasn't me kay nag expire na nim ngl or bangin gin hide mo haak? I dunno). I had a feeling you might’ve already known, but I guess not? but I never put too much thought into it. The truth is, I’m saying this because I need to cut myself off from you not because I want to, but because I know I can’t just settle for being friends with someone I genuinely have feelings for. You already knew I liked you since I told you before, but what I don’t think you know is when it all really started.
+    </p>
+    <p>
+      It wasn’t the day you joked about us being together during my championship that only made me realize it more. It actually started way before that, when you showed me your vulnerable yet mature side. Like ha tatas an mag urupod kita nira Fred. I can still remember that moment when you pouted while joking around, trying to act strong but also soft at the same time (Like an bisan guti la nak boses nahataas bisan dik nag iisog and nayakan ka "Ayaw gad ak pag isgi"). My god, maybe that’s where it truly began? I'm not sure pero adto na time like it came to my head na this peson deserves the world and, she's such a soft and caring person its adorable and, I just want to protect this person. I can’t even pinpoint it exactly, but what I know for sure is that my feelings grew deeper from then on.
+    </p>
+    <p>
+      It kept bothering me because, even though I tried to deny it, I couldn’t. And when you joked about “wanting me,” I’ll admit I seriously thought about it. I wondered, what if? But since it was a joke, I brushed it off, even if deep down it meant something more to me. That’s when I realized I don’t do well with jokes like that, especially when it’s about something real to me. And I also don't think you should keep joking about things like that in the future with your other friends.
+    </p>
+    <p>
+      I know you used “our circle” as one of the reasons why things couldn’t happen, but honestly, that felt like such a small excuse compared to what I felt. Because the moment that joke was made, part of me knew our friendship wouldn’t be the same anymore at that day you used it as a reason, I considered our friendship as good as dead. Not because I was angry, but because I realized I couldn’t keep pretending I was fine with just being your friend. I always thought I could’ve done everything to make you happy but I also knew I’d lose my sanity if I kept pushing myself to stay when I couldn’t handle it.
+    </p>
+    <p>
+      Please don’t think I’m mad at you, because I’m really not. It’s quite the opposite. I genuinely liked you not just because you’re pretty, or funny, or any surface-level thing but because I noticed the little things about you, how you carry yourself, how you try to look strong but have that soft, vulnerable side, how you light up in random moments without even realizing it. Those little things stuck with me so much that I chose to stay beside you even when it hurt me.
+    </p>
+    <p>
+      I’m sorry this has to be said on your birthday. By the time you read this, maybe I’ll have already restricted you or maybe not it depends on how I’m holding up. But please know this... I treated you genuinely as a friend. I never gave you “special treatment” because I didn’t want to cross boundaries. This flower is probably the only special thing I’ll ever give you, because I wanted you to at least feel that you deserve to be treated right. If some guy in the past didn’t treat you the way you deserved, then let this be a reminder that you’re worth more than that.
+    </p>
+    <p>
+      And if ever you and Sam do work out, I won’t mind. I’ll genuinely be happy for both of you. That’s all. Stay safe always, Cha-Cha. If ever there’s an emergency, call Ash she knows everything already and, I told her my reasons. But I hope you two still bond from time to time.
+    </p>
+    <p>
+      Take care always, and thank you for everything, even if you didn’t realize how much it meant to me. I swear to god madakop ko la adto na nag ngl haim na usa kay kakarnehon ko gud naguba pa nak image. But on a serious note, I wish I could've said all of this in person but, knowing you, a soft hearted person I don't want to see you cry. Sorry and, Thank you talaga Cha ❤
+    </p>
+    <p>
+      <strong>Date Written:</strong> August 26, 2025<br>
+      <strong>Date Revised:</strong> August 29, 2025
+    </p>
   </div>
 
   <script>
-    document.getElementById("playButton").addEventListener("click", function () {
-      // open Spotify track in new tab
-      window.open("https://open.spotify.com/track/5p8IqHEfbNaAfpLqBYGBpj?si=740b858aaa194395", "_blank");
+    const playButton = document.getElementById("playButton");
+    const bgMusic = document.getElementById("bgMusic");
+    const message = document.getElementById("message");
 
-      // then show the message
-      document.getElementById("message").style.display = "block";
-
-      // hide the button
-      document.getElementById("playButton").style.display = "none";
-      document.querySelector("h1").textContent = "My Message for You";
+    playButton.addEventListener("click", () => {
+      bgMusic.play().then(() => {
+        message.style.display = "block";
+        playButton.style.display = "none";
+      }).catch(err => {
+        alert("Music couldn't play automatically. Please try clicking again!");
+      });
     });
   </script>
 </body>
 </html>
+
