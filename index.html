@@ -5,59 +5,96 @@
   <title>Message for Cha</title>
   <style>
     body {
-      background-color: #0a1a2f; /* dark navy */
+      background-color: #0a1a2f; 
       color: #e0e6f0;
       font-family: Arial, sans-serif;
-      line-height: 1.6;
       margin: 0;
       padding: 0;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+    }
+    .page {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+    }
+    .active {
+      display: flex;
+    }
+    button {
+      background-color: #1e3a5f;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #294b78;
     }
     .container {
-      background-color: #13294b; /* dark blue box */
+      background-color: #13294b;
       border-radius: 20px;
       padding: 30px;
       max-width: 700px;
       max-height: 85vh;
       overflow-y: auto;
       box-shadow: 0 0 20px rgba(0,0,0,0.5);
-      white-space: pre-line; /* preserves your line breaks */
+      white-space: pre-wrap;
+      text-align: left;
     }
     h1 {
-      text-align: center;
-      color: #9bbcf7; /* soft bluish */
+      color: #9bbcf7;
       margin-bottom: 20px;
-    }
-    button {
-      background-color: #1e3a5f;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 10px;
-      cursor: pointer;
-      margin-top: 15px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    button:hover {
-      background-color: #294b78;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <button onclick="document.getElementById('bg-music').play()">▶️ Play me first before reading :3</button>
+
+  <!-- Page 1 -->
+  <div id="page1" class="page active">
     <h1>Message for Cha</h1>
-    <p>
-    </p>
+    <button onclick="playMusic()">▶️ Play me first before reading :3</button>
+    <button id="continueBtn" style="display:none;" onclick="goToPage2()">Continue</button>
+  </div>
+
+  <!-- Page 2 -->
+  <div id="page2" class="page">
+    <div class="container">
+      <h1>Message for Cha</h1>
+      <div class="message">
+        (Paste your full message here — won’t cut off since it’s scrollable)
+      </div>
+    </div>
   </div>
 
   <audio id="bg-music" loop>
     <source src="Song.mp3" type="audio/mpeg">
   </audio>
+
+  <script>
+    function playMusic() {
+      const music = document.getElementById('bg-music');
+      music.play().then(() => {
+        document.getElementById('continueBtn').style.display = "inline-block";
+      }).catch(err => {
+        alert("Click again to start music — browser blocked autoplay!");
+      });
+    }
+
+    function goToPage2() {
+      document.getElementById('page1').classList.remove('active');
+      document.getElementById('page2').classList.add('active');
+    }
+  </script>
 </body>
 </html>
+
