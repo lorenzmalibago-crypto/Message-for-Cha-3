@@ -6,40 +6,53 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #fafafa;
+      background: linear-gradient(135deg, #0a1a2f, #1b2d4a);
       margin: 0;
       padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      color: #f0f4ff;
     }
     .container {
       width: 90%;
-      max-width: 600px;
-      background: white;
+      max-width: 700px;
+      background: rgba(20, 30, 50, 0.95);
       padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
       text-align: justify;
       display: none;
+      line-height: 1.7;
     }
     .active {
       display: block;
     }
+    h2 {
+      color: #cdd9ff;
+      font-weight: 600;
+    }
+    p {
+      margin-bottom: 18px;
+    }
     .btn {
       display: inline-block;
       margin-top: 15px;
-      padding: 10px 20px;
-      background: #4CAF50;
-      color: white;
+      padding: 12px 24px;
+      background: #274472;
+      color: #f0f4ff;
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
       cursor: pointer;
       font-size: 16px;
+      transition: background 0.3s ease;
+    }
+    .btn:hover:not(:disabled) {
+      background: #3b5b96;
     }
     .btn:disabled {
-      background: gray;
+      background: #555a70;
       cursor: not-allowed;
     }
     .center {
@@ -54,54 +67,27 @@
     <h2>Play me first before reading :3</h2>
     <audio id="bg-music" src="song.mp3"></audio>
     <button id="playBtn" class="btn">Play</button>
-    <button id="next0" class="btn" disabled>Next</button>
+    <button id="next0" class="btn" disabled>Read Message</button>
   </div>
 
-  <!-- Page 1 -->
+  <!-- Message Page -->
   <div id="page1" class="container">
     <p>(Final Part) Spoiler alert! Yeah, it was me hahaha (Pero legit an nag propose han telegram it wasn't me kay nag expire na nim ngl or bangin gin hide mo haak? I dunno). I had a feeling you might’ve already known, but I guess not? but I never put too much thought into it. The truth is, I’m saying this because I need to cut myself off from you not because I want to, but because I know I can’t just settle for being friends with someone I genuinely have feelings for. You already knew I liked you since I told you before, but what I don’t think you know is when it all really started.</p>
-    <button id="next1" class="btn">Next</button>
-  </div>
 
-  <!-- Page 2 -->
-  <div id="page2" class="container">
     <p>It wasn’t the day you joked about us being together during my championship that only made me realize it more. It actually started way before that, when you showed me your vulnerable yet mature side. Like ha tatas an mag urupod kita nira Fred. I can still remember that moment when you pouted while joking around, trying to act strong but also soft at the same time (Like an bisan guti la nak boses nahataas bisan dik nag iisog and nayakan ka "Ayaw gad ak pag isgi"). My god, maybe that’s where it truly began? I'm not sure pero adto na time like it came to my head na this peson deserves the world and, she's such a soft and caring person its adorable and, I just want to protect this person. I can’t even pinpoint it exactly, but what I know for sure is that my feelings grew deeper from then on.</p>
-    <button id="next2" class="btn">Next</button>
-  </div>
 
-  <!-- Page 3 -->
-  <div id="page3" class="container">
     <p>It kept bothering me because, even though I tried to deny it, I couldn’t. And when you joked about “wanting me,” I’ll admit I seriously thought about it. I wondered, what if? But since it was a joke, I brushed it off, even if deep down it meant something more to me. That’s when I realized I don’t do well with jokes like that, especially when it’s about something real to me. And I also don't think you should keep joking about things like that in the future with your other friends.</p>
-    <button id="next3" class="btn">Next</button>
-  </div>
 
-  <!-- Page 4 -->
-  <div id="page4" class="container">
     <p>I know you used “our circle” as one of the reasons why things couldn’t happen, but honestly, that felt like such a small excuse compared to what I felt. Because the moment that joke was made, part of me knew our friendship wouldn’t be the same anymore at that day you used it as a reason, I considered our friendship as good as dead. Not because I was angry, but because I realized I couldn’t keep pretending I was fine with just being your friend. I always thought I could’ve done everything to make you happy but I also knew I’d lose my sanity if I kept pushing myself to stay when I couldn’t handle it.</p>
-    <button id="next4" class="btn">Next</button>
-  </div>
 
-  <!-- Page 5 -->
-  <div id="page5" class="container">
     <p>Please don’t think I’m mad at you, because I’m really not. It’s quite the opposite. I genuinely liked you not just because you’re pretty, or funny, or any surface-level thing but because I noticed the little things about you, how you carry yourself, how you try to look strong but have that soft, vulnerable side, how you light up in random moments without even realizing it. Those little things stuck with me so much that I chose to stay beside you even when it hurt me.</p>
-    <button id="next5" class="btn">Next</button>
-  </div>
 
-  <!-- Page 6 -->
-  <div id="page6" class="container">
     <p>I’m sorry this has to be said on your birthday. By the time you read this, maybe I’ll have already restricted you or maybe not it depends on how I’m holding up. But please know this... I treated you genuinely as a friend. I never gave you “special treatment” because I didn’t want to cross boundaries. This flower is probably the only special thing I’ll ever give you, because I wanted you to at least feel that you deserve to be treated right. If some guy in the past didn’t treat you the way you deserved, then let this be a reminder that you’re worth more than that.</p>
-    <button id="next6" class="btn">Next</button>
-  </div>
 
-  <!-- Page 7 -->
-  <div id="page7" class="container">
     <p>And if ever you and Sam do work out, I won’t mind. I’ll genuinely be happy for both of you. That’s all. Stay safe always, Cha-Cha. If ever there’s an emergency, call Ash she knows everything already and, I told her my reasons. But I hope you two still bond from time to time.</p>
-    <button id="next7" class="btn">Next</button>
-  </div>
 
-  <!-- Page 8 -->
-  <div id="page8" class="container">
     <p>Take care always, and thank you for everything, even if you didn’t realize how much it meant to me. I swear to god madakop ko la adto na nag ngl haim na usa kay kakarnehon ko gud naguba pa nak image. But on a serious note, I wish I could've said all of this in person but, knowing you, a soft hearted person I don't want to see you cry. Sorry and, Thank you talaga Cha ❤</p>
+
     <p>Date Written: August 26, 2025<br>Date Revised: August 29, 2025</p>
   </div>
 
@@ -116,19 +102,10 @@
       next0.disabled = false;
     });
 
-    function showPage(curr, next) {
-      document.getElementById("page" + curr).classList.remove("active");
-      document.getElementById("page" + next).classList.add("active");
-    }
-
-    document.getElementById("next0").onclick = () => showPage(0, 1);
-    document.getElementById("next1").onclick = () => showPage(1, 2);
-    document.getElementById("next2").onclick = () => showPage(2, 3);
-    document.getElementById("next3").onclick = () => showPage(3, 4);
-    document.getElementById("next4").onclick = () => showPage(4, 5);
-    document.getElementById("next5").onclick = () => showPage(5, 6);
-    document.getElementById("next6").onclick = () => showPage(6, 7);
-    document.getElementById("next7").onclick = () => showPage(7, 8);
+    next0.addEventListener("click", () => {
+      document.getElementById("page0").classList.remove("active");
+      document.getElementById("page1").classList.add("active");
+    });
   </script>
 
 </body>
