@@ -50,6 +50,7 @@
 </head>
 <body>
   <div class="container">
+    <button onclick="document.getElementById('bg-music').play()">▶️ Play me first before reading :3</button>
     <h1>Message for Cha</h1>
     <p>
 (Final Part) Spoiler alert! Yeah, it was me hahaha (Pero legit an nag propose han telegram it wasn't me kay nag expire na nim ngl or bangin gin hide mo haak? I dunno). I had a feeling you might’ve already known, but I guess not? but I never put too much thought into it. The truth is, I’m saying this because I need to cut myself off from you not because I want to, but because I know I can’t just settle for being friends with someone I genuinely have feelings for. You already knew I liked you since I told you before, but what I don’t think you know is when it all really started.
@@ -68,26 +69,15 @@ And if ever you and Sam do work out, I won’t mind. I’ll genuinely be happy f
 
 Take care always, and thank you for everything, even if you didn’t realize how much it meant to me. I swear to god madakop ko la adto na nag ngl haim na usa kay kakarnehon ko gud naguba pa nak image. But on a serious note, I wish I could've said all of this in person but, knowing you, a soft hearted person I don't want to see you cry. Sorry and, Thank you talaga Cha ❤
 
+
+
 Date Written: August 26, 2025
 Date Revised: August 29, 2025
     </p>
-    <button onclick="document.getElementById('bg-music').play()">▶️ Play Song</button>
   </div>
 
-  <audio id="bg-music" autoplay loop muted>
+  <audio id="bg-music" loop>
     <source src="Song.mp3" type="audio/mpeg">
   </audio>
-
-  <script>
-    window.addEventListener('load', () => {
-      const music = document.getElementById('bg-music');
-      setTimeout(() => {
-        music.muted = false;
-        music.play().catch(() => {
-          console.log("Autoplay blocked, user must press Play.");
-        });
-      }, 1000);
-    });
-  </script>
 </body>
 </html>
