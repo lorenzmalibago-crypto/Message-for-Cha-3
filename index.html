@@ -2,111 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Message</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message for Cha</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0a1a2f, #1b2d4a);
-      margin: 0;
-      padding: 0;
+      background-color: #0d1b2a;
+      color: #e0e6ed;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      min-height: 100vh;
-      color: #f0f4ff;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
     }
     .container {
-      width: 90%;
-      max-width: 700px;
-      background: rgba(20, 30, 50, 0.95);
-      padding: 25px;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-      text-align: justify;
-      display: none;
-      line-height: 1.7;
+      max-width: 800px;
+      background: rgba(13, 27, 42, 0.9);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
-    .active {
-      display: block;
-    }
-    h2 {
-      color: #cdd9ff;
-      font-weight: 600;
-    }
-    p {
-      margin-bottom: 18px;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 24px;
-      background: #274472;
-      color: #f0f4ff;
+    button {
+      background-color: #1b263b;
+      color: #e0e6ed;
       border: none;
-      border-radius: 12px;
-      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 10px;
       font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
       transition: background 0.3s ease;
     }
-    .btn:hover:not(:disabled) {
-      background: #3b5b96;
-    }
-    .btn:disabled {
-      background: #555a70;
+    button:disabled {
+      background-color: #3a506b;
       cursor: not-allowed;
     }
-    .center {
-      text-align: center;
+    button:hover:enabled {
+      background-color: #415a77;
+    }
+    #message {
+      display: none;
+      text-align: justify;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
-
-  <!-- First Page (Play music) -->
-  <div id="page0" class="container active center">
+  <div class="container">
     <h2>Play me first before reading :3</h2>
-    <audio id="bg-music" src="song.mp3"></audio>
-    <button id="playBtn" class="btn">Play</button>
-    <button id="next0" class="btn" disabled>Read Message</button>
+    <button id="playBtn">Play Music</button>
+    <button id="nextBtn" disabled>Read Message</button>
+
+    <div id="message">
+      <p>
+        (Final Part) Spoiler alert! Yeah, it was me hahaha (Pero legit an nag propose han telegram it wasn't me kay nag expire na nim ngl or bangin gin hide mo haak? I dunno). I had a feeling you might’ve already known, but I guess not? but I never put too much thought into it. The truth is, I’m saying this because I need to cut myself off from you not because I want to, but because I know I can’t just settle for being friends with someone I genuinely have feelings for. You already knew I liked you since I told you before, but what I don’t think you know is when it all really started.
+      </p>
+      <!-- continue your full message here -->
+    </div>
   </div>
 
-  <!-- Message Page -->
-  <div id="page1" class="container">
-    <p>(Final Part) Spoiler alert! Yeah, it was me hahaha (Pero legit an nag propose han telegram it wasn't me kay nag expire na nim ngl or bangin gin hide mo haak? I dunno). I had a feeling you might’ve already known, but I guess not? but I never put too much thought into it. The truth is, I’m saying this because I need to cut myself off from you not because I want to, but because I know I can’t just settle for being friends with someone I genuinely have feelings for. You already knew I liked you since I told you before, but what I don’t think you know is when it all really started.</p>
-
-    <p>It wasn’t the day you joked about us being together during my championship that only made me realize it more. It actually started way before that, when you showed me your vulnerable yet mature side. Like ha tatas an mag urupod kita nira Fred. I can still remember that moment when you pouted while joking around, trying to act strong but also soft at the same time (Like an bisan guti la nak boses nahataas bisan dik nag iisog and nayakan ka "Ayaw gad ak pag isgi"). My god, maybe that’s where it truly began? I'm not sure pero adto na time like it came to my head na this peson deserves the world and, she's such a soft and caring person its adorable and, I just want to protect this person. I can’t even pinpoint it exactly, but what I know for sure is that my feelings grew deeper from then on.</p>
-
-    <p>It kept bothering me because, even though I tried to deny it, I couldn’t. And when you joked about “wanting me,” I’ll admit I seriously thought about it. I wondered, what if? But since it was a joke, I brushed it off, even if deep down it meant something more to me. That’s when I realized I don’t do well with jokes like that, especially when it’s about something real to me. And I also don't think you should keep joking about things like that in the future with your other friends.</p>
-
-    <p>I know you used “our circle” as one of the reasons why things couldn’t happen, but honestly, that felt like such a small excuse compared to what I felt. Because the moment that joke was made, part of me knew our friendship wouldn’t be the same anymore at that day you used it as a reason, I considered our friendship as good as dead. Not because I was angry, but because I realized I couldn’t keep pretending I was fine with just being your friend. I always thought I could’ve done everything to make you happy but I also knew I’d lose my sanity if I kept pushing myself to stay when I couldn’t handle it.</p>
-
-    <p>Please don’t think I’m mad at you, because I’m really not. It’s quite the opposite. I genuinely liked you not just because you’re pretty, or funny, or any surface-level thing but because I noticed the little things about you, how you carry yourself, how you try to look strong but have that soft, vulnerable side, how you light up in random moments without even realizing it. Those little things stuck with me so much that I chose to stay beside you even when it hurt me.</p>
-
-    <p>I’m sorry this has to be said on your birthday. By the time you read this, maybe I’ll have already restricted you or maybe not it depends on how I’m holding up. But please know this... I treated you genuinely as a friend. I never gave you “special treatment” because I didn’t want to cross boundaries. This flower is probably the only special thing I’ll ever give you, because I wanted you to at least feel that you deserve to be treated right. If some guy in the past didn’t treat you the way you deserved, then let this be a reminder that you’re worth more than that.</p>
-
-    <p>And if ever you and Sam do work out, I won’t mind. I’ll genuinely be happy for both of you. That’s all. Stay safe always, Cha-Cha. If ever there’s an emergency, call Ash she knows everything already and, I told her my reasons. But I hope you two still bond from time to time.</p>
-
-    <p>Take care always, and thank you for everything, even if you didn’t realize how much it meant to me. I swear to god madakop ko la adto na nag ngl haim na usa kay kakarnehon ko gud naguba pa nak image. But on a serious note, I wish I could've said all of this in person but, knowing you, a soft hearted person I don't want to see you cry. Sorry and, Thank you talaga Cha ❤</p>
-
-    <p>Date Written: August 26, 2025<br>Date Revised: August 29, 2025</p>
-  </div>
+  <audio id="bg-music" src="song.mp3" preload="auto"></audio>
 
   <script>
-    const music = document.getElementById("bg-music");
     const playBtn = document.getElementById("playBtn");
-    const next0 = document.getElementById("next0");
+    const nextBtn = document.getElementById("nextBtn");
+    const music = document.getElementById("bg-music");
+    const message = document.getElementById("message");
 
     playBtn.addEventListener("click", () => {
-      music.play();
-      playBtn.disabled = true;
-      next0.disabled = false;
+      music.play().then(() => {
+        playBtn.disabled = true;
+        nextBtn.disabled = false;
+      }).catch(err => {
+        console.error("Playback failed:", err);
+        alert("Music could not play. Please click again or check your file.");
+      });
     });
 
-    next0.addEventListener("click", () => {
-      document.getElementById("page0").classList.remove("active");
-      document.getElementById("page1").classList.add("active");
+    nextBtn.addEventListener("click", () => {
+      message.style.display = "block";
+      nextBtn.style.display = "none";
+      playBtn.style.display = "none";
     });
   </script>
-
 </body>
 </html>
