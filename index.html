@@ -2,89 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Message for Cha</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #0d1b2a;
-      color: #e0e6ed;
+      background: linear-gradient(135deg, #0a1a2f, #1b2d4a);
+      color: #f0f4ff;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      margin: 0;
-      text-align: center;
     }
-    .container {
+    .page {
       max-width: 800px;
-      background: rgba(13, 27, 42, 0.9);
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      background: rgba(20, 30, 50, 0.95);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      display: none;
     }
+    .active { display: block; }
+    h1 { color: #cdd9ff; text-align: center; margin-bottom: 20px; }
+    p { text-align: justify; line-height: 1.7; margin-bottom: 18px; }
     button {
-      background-color: #1b263b;
-      color: #e0e6ed;
+      display: block;
+      margin: 20px auto 0;
+      padding: 12px 24px;
+      background: #274472;
+      color: #f0f4ff;
       border: none;
-      padding: 10px 20px;
-      border-radius: 10px;
+      border-radius: 12px;
       font-size: 16px;
       cursor: pointer;
-      margin-top: 20px;
-      transition: background 0.3s ease;
+      transition: background 0.3s;
     }
     button:disabled {
-      background-color: #3a506b;
+      background: #555a70;
       cursor: not-allowed;
     }
-    button:hover:enabled {
-      background-color: #415a77;
-    }
-    #message {
-      display: none;
-      text-align: justify;
-      line-height: 1.6;
+    button:hover:enabled { background: #3b5b96; }
+    iframe {
+      width: 100%;
+      height: 152px;
+      border: none;
+      border-radius: 12px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>Play me first before reading :3</h2>
-    <button id="playBtn">Play Music</button>
-    <button id="nextBtn" disabled>Read Message</button>
 
-    <div id="message">
-      <p>
-        (Final Part) Spoiler alert! Yeah, it was me hahaha (Pero legit an nag propose han telegram it wasn't me kay nag expire na nim ngl or bangin gin hide mo haak? I dunno). I had a feeling you might’ve already known, but I guess not? but I never put too much thought into it. The truth is, I’m saying this because I need to cut myself off from you not because I want to, but because I know I can’t just settle for being friends with someone I genuinely have feelings for. You already knew I liked you since I told you before, but what I don’t think you know is when it all really started.
-      </p>
-      <!-- continue your full message here -->
-    </div>
+  <!-- Page 1: Spotify Gate -->
+  <div id="page1" class="page active">
+    <h1>Play me first before reading :3</h1>
+    <iframe id="spotifyPlayer"
+      src="https://open.spotify.com/embed/track/5p8IqHEfbNaAfpLqBYGBpj?utm_source=generator"
+      allow="autoplay; encrypted-media; clipboard-write; fullscreen; picture-in-picture">
+    </iframe>
+    <button id="nextBtn" disabled>Next</button>
   </div>
 
-  <audio id="bg-music" src="song.mp3" preload="auto"></audio>
+  <!-- Page 2: Message -->
+  <div id="page2" class="page">
+    <h1>For You</h1>
+    <p>
+      (Final Part) Spoiler alert! Yeah, it was me hahaha. I’ve been the one behind this from the start.  
+      I wanted to make something special, something a little different from just words on chat or a random note.  
+      I know I’m not always the best with expressing things face-to-face, but I thought this could be one way to let it all out.
+    </p>
+    <p>
+      I just want you to know that you’re really important to me. I don’t always say it, but I notice the little things,  
+      and I’m really grateful for you—your presence, the way you make things lighter even when they’re tough,  
+      and how you’ve unknowingly inspired me in so many ways. I admire you a lot, more than I can probably explain here.
+    </p>
+    <p>
+      I know life gets messy sometimes, and not everything goes the way we want it to,  
+      but please remember that I’ll always be rooting for you. Whether you notice it or not,  
+      I’ll be in your corner, cheering you on quietly. You’ve got so much ahead of you,  
+      and I truly believe you’re capable of reaching it all.
+    </p>
+    <p>
+      And maybe, just maybe, this is also me being a little selfish—wanting you to know that you matter to me,  
+      that I care a lot more than I let on. You’ve become someone I’ll always look forward to,  
+      someone I don’t ever want to lose. That’s the truth.
+    </p>
+    <p>
+      Anyway, I’ll stop before this turns into a full novel hahaha.  
+      But yeah… this is me, telling you straight, even if it’s hidden behind a page like this.  
+      Thank you for being you. Thank you for everything, really.
+    </p>
+    <p>
+      Date Written: August 26, 2025<br>
+      Date Revised: August 29, 2025
+    </p>
+  </div>
 
   <script>
-    const playBtn = document.getElementById("playBtn");
     const nextBtn = document.getElementById("nextBtn");
-    const music = document.getElementById("bg-music");
-    const message = document.getElementById("message");
+    const page1 = document.getElementById("page1");
+    const page2 = document.getElementById("page2");
+    const spotifyPlayer = document.getElementById("spotifyPlayer");
 
-    playBtn.addEventListener("click", () => {
-      music.play().then(() => {
-        playBtn.disabled = true;
-        nextBtn.disabled = false;
-      }).catch(err => {
-        console.error("Playback failed:", err);
-        alert("Music could not play. Please click again or check your file.");
-      });
+    // Unlock "Next" once iframe is interacted with
+    spotifyPlayer.addEventListener("mouseenter", () => {
+      nextBtn.disabled = false;
     });
 
     nextBtn.addEventListener("click", () => {
-      message.style.display = "block";
-      nextBtn.style.display = "none";
-      playBtn.style.display = "none";
+      page1.classList.remove("active");
+      page2.classList.add("active");
     });
   </script>
 </body>
