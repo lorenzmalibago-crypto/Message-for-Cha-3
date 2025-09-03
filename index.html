@@ -24,6 +24,7 @@
       border-radius: 20px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.5);
       display: none; /* hidden until play */
+      white-space: pre-wrap; /* preserve new lines */
     }
     button {
       padding: 12px 24px;
@@ -39,6 +40,9 @@
     button:hover {
       background: #2a4f91;
     }
+    #letterText {
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
@@ -48,48 +52,55 @@
 
   <div class="container" id="message">
     <h2>Hi Cha!</h2>
-    <p>
-      (Finale) Spoiler alert… yeah, it was me hahaha. (Pero legit an nag-propose han telegram, it wasn’t me kay bangin nag-expire na nim ngl or gin hide mo haak? I don’t know.) Honestly, I had a feeling you might’ve already known, but I guess not. The thing is, I never really gave it too much thought, maybe because I was scared. And now, I’m only saying this because I know I need to let go and, by that I mean I need to cut you off. Not because I want to, but because I can’t settle for just being “friends” with someone I genuinely have feelings for.
-    <p>
-      You already knew I liked you, I told you before. Pero what you don’t know is when it truly began. It wasn’t during the championship, when you joked about us being together—that only confirmed it. It started earlier, when you showed me a side of you that was both soft and strong, vulnerable yet mature. I still remember that time na kaupod naton hira Fred, and you pouted, joking around, acting tough but also so soft at the same time. Like when you said, “Ayaw gad ak pag-isgi,” with that tiny voice, half-playing, half-serious. Maybe that was the moment. Maybe that was when I thought, “This person deserves the world. She’s so caring, so softhearted… and I just want to protect her.” From then on, my feelings only grew..
-    </p>
-    <p>
-      I tried denying it, but I couldn’t. And when you joked about “wanting me,” I actually thought about it. For a second, I imagined what it would be like if it were true. Pero since it was a joke, I brushed it off. Deep down though, it mattered to me more than I wanted to admit. That’s when I realized I don’t handle those kinds of jokes well, especially when they hit something real for me.
-    </p>
-    <p>
-      You once told me “our circle” was one of the reasons it couldn’t happen. Pero to me, that reason felt so small compared to what I felt for you. Because the moment that joke happened, deep inside I knew things between us would never be the same again. Not because I was angry... I wasn’t, but because I realized I couldn’t keep pretending I was fine with being just your friend. I thought I could’ve done everything to make you happy, but I also knew I’d lose myself if I stayed.
-    </p>
-    <p>
-      Please don’t think I’m mad, because I’m not. It’s the opposite. I liked you because of the little things your dimples when you smile, the way you try to act strong when you’re soft inside, the way you light up without realizing it, and your eyes I don't even know where to begin. Those little things stuck with me. That’s why I stayed, even when it hurt.
-    </p>
-    <p>
-      I’m sorry that this is coming out on your birthday. By the time you read this, maybe I’ll have already restricted you, or maybe not. It depends how strong I’m holding up. But please know this: I treated you genuinely as a friend. I never gave you “special treatment” because I respected your boundaries. This flower is the only “special” thing I’ve ever given, and it’s just to remind you—you deserve to be treated right. If someone in the past failed to show you that, let this be a memory that you are worth so much more.
-    </p>
-    <p>
-      The truth is, I kept falling for you in little ways. Even when I tried to keep my distance, I found myself putting everything aside when I felt something was off—like the time we went to 7/11 with Ash. I couldn’t help it. Every small gesture, every smile, every moment talking with you… it all made me want to hold you close and tell you, “You’re not wrong. You don’t deserve the pain you’re going through.”
-    </p>
-    <p>
-      If ever both of you work out, I won’t mind. I’ll be happy for you both, genuinely. I just hope he sees you the way I did. the little things, your tiny gestures, your cute habits, the real you, and I wish he treats you right.
-    </p>
-      <p>
-      Cha, thank you. For everything. For the smiles, the moments, even if you didn’t realize how much they meant to me. I wish I had the courage to say all this in person but just thinking about it is painful for me already, and knowing how soft your heart is, I didn’t want to see you cry. So I’ll leave it here, hoping that somehow you’ll understand how much you meant to me. Sorry, and thank you, always. ❤
-    </p>
-    <p>
-      <strong>Date Written:</strong> August 26, 2025<br>
-      <strong>Date Revised:</strong> August 29, 2025<br>
-      <strong>Date Revised:</strong> September 2, 2025
-    </p>
+    <div id="letterText"></div>
   </div>
 
   <script>
     const playButton = document.getElementById("playButton");
     const bgMusic = document.getElementById("bgMusic");
     const message = document.getElementById("message");
+    const letterText = document.getElementById("letterText");
+
+    const text = `(Finale) Spoiler alert… yeah, it was me hahaha. (Pero legit an nag-propose han telegram, it wasn’t me kay bangin nag-expire na nim ngl or gin hide mo haak? I don’t know.) Honestly, I had a feeling you might’ve already known, but I guess not. The thing is, I never really gave it too much thought, maybe because I was scared. And now, I’m only saying this because I know I need to let go and, by that I mean I need to cut you off. Not because I want to, but because I can’t settle for just being “friends” with someone I genuinely have feelings for.
+
+You already knew I liked you, I told you before. Pero what you don’t know is when it truly began. It wasn’t during the championship, when you joked about us being together—that only confirmed it. It started earlier, when you showed me a side of you that was both soft and strong, vulnerable yet mature. I still remember that time na kaupod naton hira Fred, and you pouted, joking around, acting tough but also so soft at the same time. Like when you said, “Ayaw gad ak pag-isgi,” with that tiny voice, half-playing, half-serious. Maybe that was the moment. Maybe that was when I thought, “This person deserves the world. She’s so caring, so softhearted… and I just want to protect her.” From then on, my feelings only grew.
+
+I tried denying it, but I couldn’t. And when you joked about “wanting me,” I actually thought about it. For a second, I imagined what it would be like if it were true. Pero since it was a joke, I brushed it off. Deep down though, it mattered to me more than I wanted to admit. That’s when I realized I don’t handle those kinds of jokes well, especially when they hit something real for me.
+
+You once told me “our circle” was one of the reasons it couldn’t happen. Pero to me, that reason felt so small compared to what I felt for you. Because the moment that joke happened, deep inside I knew things between us would never be the same again. Not because I was angry... I wasn’t, but because I realized I couldn’t keep pretending I was fine with being just your friend. I thought I could’ve done everything to make you happy, but I also knew I’d lose myself if I stayed.
+
+Please don’t think I’m mad, because I’m not. It’s the opposite. I liked you because of the little things—your dimples when you smile, the way you try to act strong when you’re soft inside, the way you light up without realizing it, and your eyes I don't even know where to begin. Those little things stuck with me. That’s why I stayed, even when it hurt.
+
+I was honestly ready to court you, to give you everything I could, to love you the way you deserved. Pero you turned me down… and that’s the part that hurts the most—because no matter how much I wanted it, I can’t change it anymore.
+
+I’m sorry that this is coming out on your birthday. By the time you read this, maybe I’ll have already restricted you, or maybe not. It depends how strong I’m holding up. But please know this: I treated you genuinely as a friend. I never gave you “special treatment” because I respected your boundaries. This flower is the only “special” thing I’ve ever given, and it’s just to remind you—you deserve to be treated right. If someone in the past failed to show you that, let this be a memory that you are worth so much more.
+
+The truth is, I kept falling for you in little ways. Even when I tried to keep my distance, I found myself putting everything aside when I felt something was off—like the time we went to 7/11 with Ash. I couldn’t help it. Every small gesture, every smile, every moment talking with you… it all made me want to hold you close and tell you, “You’re not wrong. You don’t deserve the pain you’re going through.”
+
+If ever both of you work out, I won’t mind. I’ll be happy for you both, genuinely. I just hope he sees you the way I did—the little things, your tiny gestures, your cute habits, the real you, and I wish he treats you right.
+
+Cha, thank you. For everything. For the smiles, the moments, even if you didn’t realize how much they meant to me. I wish I had the courage to say all this in person but just thinking about it is painful for me already, and knowing how soft your heart is, I didn’t want to see you cry. So I’ll leave it here, hoping that somehow you’ll understand how much you meant to me. Sorry, and thank you, always. ❤
+
+Date Written: August 26, 2025
+Date Revised: August 29, 2025
+Date Revised: September 2, 2025`;
 
     playButton.addEventListener("click", () => {
       bgMusic.play().then(() => {
-        message.style.display = "block";
         playButton.style.display = "none";
+        message.style.display = "block";
+
+        let i = 0;
+        const speed = 40; // ms per character
+        function typeWriter() {
+          if (i < text.length) {
+            letterText.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+        typeWriter();
+
       }).catch(err => {
         alert("Music couldn't play automatically. Please try clicking again!");
       });
@@ -97,4 +108,3 @@
   </script>
 </body>
 </html>
-
